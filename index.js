@@ -4,10 +4,9 @@ const port = 3000;
 const instance = require('./src/session.js')
 
 app.post('/request', (req, res) => {
-    req.on('data',async (data)=>{
-		obj=JSON.parse(data);      
-        if (obj.method == 'session'){
-            const response = await instance.SessionCreate(obj);
+    req.on('data',async (data)=>{ 
+        if (JSON.parse(data).method == 'session'){
+            const response = await instance.SessionCreate(JSON.parse(data));
             res.send(response);
         }
 	});
