@@ -1,0 +1,18 @@
+{
+  "name": "antiflare",
+  "version": "1.0.0",
+  "description": "Use Puppeteer to bypass Cloudflare protection",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CopMore/AntiFlare.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CopMore/AntiFlare/issues"
+  },
+  "homepage": "https://github.com/CopMore/AntiFlare#readme"
+}
