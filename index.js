@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-const instance = require('./src/session.js')
+const instance = require('./src/session.js');
 
 app.post('/request', (req, res) => {
     req.on('data',async (data)=>{ 
