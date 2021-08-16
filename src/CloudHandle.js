@@ -18,7 +18,7 @@ async function HandleChallenge(url) {
     while(content.includes('challenge-form')) {
       await page.waitForNavigation({ waitUntil: 'domcontentloaded', timeout: 15*1000 });
       content = await page.content();
-      if (count++ === 100) {
+      if (count++ === 25) {
         throw new Error('timeout on just a moment');
       }
     }
