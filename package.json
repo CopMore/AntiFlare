@@ -14,5 +14,11 @@
   "bugs": {
     "url": "https://github.com/CopMore/AntiFlare/issues"
   },
-  "homepage": "https://github.com/CopMore/AntiFlare#readme"
+  "homepage": "https://github.com/CopMore/AntiFlare#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "puppeteer": "^10.2.0",
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-stealth": "^2.7.8"
+  }
 }
