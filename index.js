@@ -1,14 +1,13 @@
 const express = require('express');
 const app = express();
-const port = 3000;
-const instance = require('./src/session.js');
+const port = 105;
+const CloudHandle = require('./src/CloudHandle.js');
 
-app.post('/request', (req, res) => {
+app.post('/request',(req, res) => {
     req.on('data',async (data)=>{ 
-        if (JSON.parse(data).method == 'session'){
-            const response = await instance.SessionCreate(JSON.parse(data));
-            res.send(response);
-        }
+        let url = JSON.parse(data).url;
+        let response = await CloudHandle(url);
+        res.send(response);
 	});
 })
 
