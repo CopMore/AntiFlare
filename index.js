@@ -6,7 +6,8 @@ const CloudHandle = require('./src/CloudHandle.js');
 app.post('/request',(req, res) => {
     req.on('data',async (data)=>{ 
         let url = JSON.parse(data).url;
-        let response = await CloudHandle(url);
+        let proxy = JSON.parse(data).proxy;
+        let response = await CloudHandle(url,proxy);
         res.send(response);
 	});
 })
